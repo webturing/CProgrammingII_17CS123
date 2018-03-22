@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+
 struct Student {
   char name[20];
   int age;
@@ -12,4 +15,5 @@ int main() {
   st.age = 18;
   st.score = 80;
   printf("%s %d %d\n", st.name, st.age, st.score);
+  return 0;
 }

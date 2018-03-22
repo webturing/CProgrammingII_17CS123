@@ -1,10 +1,10 @@
+#include <stdio.h>
 
 struct Point {
   int x;
   int y;
 };
-void input(struct Point p)  /// wrong  pass by value
-{
+void input(struct Point p) {  /// wrong  pass by value
   printf("In function input: &p=%x\n", &p);
   scanf("%d%d", &p.x, &p.y);
 }
@@ -15,4 +15,5 @@ int main() {
   printf("In function main: &p=%x\n", &p);
   input(p);
   print(p);
+  return 0;
 }

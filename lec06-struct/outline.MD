@@ -26,7 +26,7 @@ struct Student{
 ## typedef使用
 ##结构体函数
 ```
-typedef struct {
+typedef struct {  
   int x;
   int y;
 } POINT;

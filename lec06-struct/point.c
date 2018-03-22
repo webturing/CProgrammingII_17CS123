@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 struct Point {
   int x;
@@ -9,4 +10,5 @@ int main() {
   scanf("%d%d", &p.x, &p.y);  // . ->
   printf("%d %d\n", p.x, p.y);
   struct Point q, r;
+  return 0;
 }

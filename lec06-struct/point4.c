@@ -1,5 +1,6 @@
 ///(*p).x  <=> p->x
 /// using typedef
+#include <stdio.h>
 typedef struct {
   int x;
   int y;
@@ -17,4 +18,5 @@ int main() {
   printf("sizeof(struct Point*)=%d\n", sizeof(POINT*));
   input(&p);
   print(&p);
+  return 0;
 }

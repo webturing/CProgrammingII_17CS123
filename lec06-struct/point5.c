@@ -1,5 +1,6 @@
 ///(*p).x  <=> p->x
 /// using typedef
+#include <stdio.h>
 typedef struct {
   int x;
   int y;

@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 struct Point {
   int x;
@@ -13,4 +14,5 @@ int main() {
   // printf("In function main: &p=%x\n",&p);
   input(&p);
   print(&p);
+  return 0;
 }
