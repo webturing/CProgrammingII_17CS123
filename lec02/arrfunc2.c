@@ -1,17 +1,15 @@
-#include<stdio.h>
-void g(int x)///值传递
+#include <stdio.h>
+void g(int x)  ///值传递
 {
-      printf("In func g &x=%x\n",&x);
-    x++;
+  printf("In func g &x=%x\n", &x);
+  x++;
 }
 
-
-int main()
-{
-    int x=3;
-    g(x);
-   /// x++;
-   printf("In func main &x=%x\n",&x);
-    printf("%d\n",x);
-    return 0;
+int main() {
+  int x = 3;
+  g(x);
+  /// x++;
+  printf("In func main &x=%x\n", &x);
+  printf("%d\n", x);
+  return 0;
 }
