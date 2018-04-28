@@ -36,6 +36,9 @@ void dfs(int k, int t) {
   }
 }
 int main() {
+ long long start=clock();
   fill();
   dfs(0, 1);
+  long long end=clock();
+  printf("%.3f\n",(end-start)/1000.0);
 }
