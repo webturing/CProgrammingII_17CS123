@@ -1,45 +1,51 @@
-# 数论基础Introduction of Integer Theory
+# 数论算法
 
-##整数
-- a+b a-b a*b 
+@author [ZHAO Jing]( zj@webturing.com)
 
-- a/b= q   r
 
-  17 /3 =5 .... 2
 
-- n%2==0  
+## 基本概念
 
-- n&1
+- **整除性**:  
 
-- 长度```  int len=(int)(log10(n)+1)```
-## 整除
+  - 若整数$d$ 是整数$n$的因子，即$\exists t \in \mathbb{Z}$ 满足$ dt=n$记作为$d \mid n$。
+  - 反之$d \nmid n$ 
+- **素数**: 
 
-整除 p|n  3|15
+  - 若$\forall x :2\le x \le n-1$  都有$ x\nmid n $则$n$是素数
+  - 反之称n是**合数**
+  - 特别的规定 1不是素数
+- **除法定理**
 
-公约数 p|n && p|m  p是m,n公因子 Greatest Common Divisor  gcd(a,b)
+  - 对于任何整数$a$ 存在唯一的证书$q$和$r$ 满足 $0\le r \lt n$ 且$a=qm+r$
+  - 称 $q =\lfloor a/n \rfloor$ 为**商**  $r=a \mod n$ 为**余数**
+  - 如果 $n \mid (a-b)$  称$a$ $b$ 对于$n$同余 记为 $ a \equiv  b  \mod n$
+- 公约数和最大公约数GCD
 
-公倍数 Least Common Multiplier  lcm(a,b)
+  - 若$d \mid a $ 且$d\mid b$ , 则$d$为$a$ 和$b$公约数
+  - 所有$d$中最大的称为**最大公约数GCD** 记为$gcd(a,b)$
+  - 特别的如果 $gcd(a,b)=1$称 a,b**互质**
+- 公倍数和最小公倍数LCM
 
-gcd(a,b)*lcm(a,b)==a  * b
+  - 若$a \mid d $ 且$b\mid d$ , 则$d$为$a$ 和$b$公倍数
+  - 所有$d$中最小的称为**最小公倍数LCM**记为$lcm(a,b)$
+- 唯一因子分解定理
+  - 合数$a​$仅有一种方式写成如下的乘积形式$ a= p_1^{e_1}p_2^{e_2}p_3^{e_3}...p_r^{e_r}​$其中 $p_i​$是质数 且$p_1<p_2<...<p_r​$
 
-## 质数
 
-对于一切 n>p>=2   p|n都不成立  称 n是质数
 
-- O(n)
-- O(sqrt(n)）
-- O(sqrt(n)/2)
-- 筛法
+## 最大公约数
+- **GCD递归定理** $gcd(a,b)=gcd(b,a \mod b)$
 
-## 同余
+- **欧几里得算法I**
 
-(a+b)%r=(a%r+b%r)%r
+  ```
+  EUCULID(a,b)
+  if b==0
+  	return a
+  else return EUCLID(b,a%b)
+  ```
 
-(a*b)%r=(a%r *b%r)%r
+-  **欧几里得算法II**
 
-(n+1)^k % n = 1
-
-## 循环节
-
-如果一个n不含有2,5因子，则必然存在长度不超过n+1的9 ak 满足ak%n==0
 
