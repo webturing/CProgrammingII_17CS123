@@ -1,36 +1,31 @@
 #define NULL 0
-typedef struct node{
+typedef struct node {
   int data;
-  struct node *next;
-}NODE;
-NODE *head;
+  struct node* next;
+} NODE;
+NODE* head;
 
-int main(){
-    NODE* p=(NODE*)malloc(sizeof(NODE));
-    p->data=0;
-    p->next=NULL;
-    head=p;
+int main() {
+  NODE* p = (NODE*)malloc(sizeof(NODE));
+  p->data = 0;
+  p->next = NULL;
+  head = p;
 
-    NODE* q=(NODE*)malloc(sizeof(NODE));
-    q->data=1;
-    q->next=NULL;
+  NODE* q = (NODE*)malloc(sizeof(NODE));
+  q->data = 1;
+  q->next = NULL;
 
-    NODE* r=(NODE*)malloc(sizeof(NODE));
-    r->data=2;
-    r->next=NULL;
+  NODE* r = (NODE*)malloc(sizeof(NODE));
+  r->data = 2;
+  r->next = NULL;
 
-    p->next=q;
-    q->next=r;
+  p->next = q;
+  q->next = r;
 
-    NODE* cur=p;
+  NODE* cur = p;
 
-    while(cur!=NULL)
-    {
-        printf("%d->",cur->data);
-        cur=cur->next;
-    }
-
-
-
-
+  while (cur != NULL) {
+    printf("%d->", cur->data);
+    cur = cur->next;
+  }
 }
